@@ -1,0 +1,33 @@
+{
+  "name": "lg-services",
+  "version": "0.1.1-beta.7",
+  "description": "lg-services",
+  "main": "./lib/index.js",
+  "dependencies": {
+    "axios": "^1.1.2",
+    "element-ui": "^2.15.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.1",
+    "@babel/plugin-transform-runtime": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "rollup": "^2.79.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "publishConfig": {
+    // "registry": ""
+  },
+  "repository": {
+    "type": "git",
+    // "url": "git@codeup.aliyun.com:60b822f4dbbed34fe0f0abab/HB_FE_AWG/hb-services.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
