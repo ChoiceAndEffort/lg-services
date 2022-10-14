@@ -3,10 +3,10 @@ import { Message } from 'element-ui';
 
 //不同环境的API
 const API = {
-  developmentApi: 'http://192.168.20.151:9099',
-  productionApi: 'https://erp-api.gggjpg.com:9999',
-  testApi: 'https://192.168.20.152:9099',
-  releaseApi: 'https://test-erp.gggjpg.com:2222'
+  developmentApi: '',
+  productionApi: '',
+  testApi: '',
+  releaseApi: ''
 };
 const TIME_OUT = 30 * 1000;
 

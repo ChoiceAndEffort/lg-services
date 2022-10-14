@@ -1,32 +1,6 @@
 import axios from 'axios';
 import { Message } from 'element-ui';
 
-// //不同环境的API
-// const API = {
-//   production: {
-//     production: 'https://erp-api.gggjpg.com:9999',
-//     test: 'https://192.168.20.152:9099',
-//     release: 'https://test-erp.gggjpg.com:2222'
-//   },
-//   development: 'http://192.168.20.151:9099'
-// };
-// const TIME_OUT = 30 * 1000;
-
-// const NODE_ENV = process.env.NODE_ENV;
-// const APP_TITLE = process.env.VUE_APP_TITLE;
-
-// const options = {
-//   baseURL:
-//     Object.prototype.toString.call(API[NODE_ENV]) === '[object Object]'
-//       ? API[NODE_ENV]?.[APP_TITLE]
-//       : API[NODE_ENV],
-//   withCredentials: true,
-//   timeout: TIME_OUT,
-//   headers: {
-//     'Access-Control-Allow-Origin': '*'
-//   }
-// };
-
 class HttpRequest {
   constructor(options) {
     this.instance = axios.create(options);

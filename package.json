@@ -22,11 +22,11 @@
     "build": "rollup -c"
   },
   "publishConfig": {
-    // "registry": ""
+    "registry": " https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
-    // "url": "git@codeup.aliyun.com:60b822f4dbbed34fe0f0abab/HB_FE_AWG/hb-services.git"
+    "url": "git@github.com:leigong421/lg-services.git"
   },
   "author": "",
   "license": "ISC"
