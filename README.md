@@ -15,11 +15,11 @@
 
 > 项目中运用到的公共请求方法
 
-- 切换到公司外部的 npm 镜像
+- 切换到公司的 npm 镜像
 
 - npm install hb-services -S
 
-- 更新包npm install hb-services@latest -S
+- 更新包 npm install hb-services@latest -S
 
 - import { axios } from 'hb-services'
 - axios.get(url,params)
@@ -34,8 +34,6 @@ import axios from 'axios';
 import { axios } from 'hb-services';
 ```
 
-
-
 - 卸载包 npm uninstall hb-services
 
 ### HttpRequest 方法的使用
@@ -46,11 +44,11 @@ import { axios } from 'hb-services';
 ```js
 const API = {
   production: {
-    production: 'https://erp-api.gggjpg.com:9999',
-    test: 'https://192.168.20.152:9099',
-    release: 'https://test-erp.gggjpg.com:2222'
+    production: '',
+    test: '',
+    release: ''
   },
-  development: 'http://192.168.20.151:9099'
+  development: ''
 };
 const TIME_OUT = 30 * 1000;
 const NODE_ENV = process.env.NODE_ENV;
@@ -82,4 +80,4 @@ instance.post(url, data);
 
 ## 协作者
 
-> 张航, 龚磊
+> 龚磊
