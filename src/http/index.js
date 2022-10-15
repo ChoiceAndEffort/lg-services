@@ -42,11 +42,6 @@ axios.interceptors.request.use(
   (config) => {
     config.headers.Token =
       JSON.parse(window.sessionStorage.getItem('vuex'))?.user?.token || '';
-    if (config.method === 'get') {
-      //为get请求添加时间戳，防止缓存问题
-      const t = Date.now();
-      config.params.t = t;
-    }
     return config;
   },
   (err) => {
