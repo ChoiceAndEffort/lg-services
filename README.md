@@ -5,6 +5,10 @@
 ## 加入了 standard-version 自动生成 Changelog 日志和自动发版的指令
 
 ```json
+  "devDependencies": {
+        "standard-version": "^9.5.0"
+  }
+
 
   "scripts": {
     "build": "rollup -c",
