@@ -1,6 +1,6 @@
 {
   "name": "@lg/lg-services",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "lg-services",
   "main": "./lib/index.js",
   "dependencies": {
@@ -10,6 +10,8 @@
     "@babel/core": "^7.19.1",
     "@babel/plugin-transform-runtime": "^7.19.1",
     "@babel/preset-env": "^7.19.1",
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
     "husky": "^8.0.3",
