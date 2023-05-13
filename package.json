@@ -1,6 +1,6 @@
 {
   "name": "@lg/lg-services",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "lg-services",
   "main": "./lib/index.js",
   "dependencies": {
@@ -23,7 +23,7 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "release": "standard-version && git push --follow-tags",
+    "release": "standard-version && npm publish",
     "prepare": "husky install"
   },
   "husky": {
