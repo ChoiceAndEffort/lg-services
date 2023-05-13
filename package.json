@@ -1,11 +1,10 @@
 {
-  "name": "lg-services",
-  "version": "0.1.1-beta.7",
+  "name": "@lg/lg-services",
+  "version": "0.0.1",
   "description": "lg-services",
   "main": "./lib/index.js",
   "dependencies": {
-    "axios": "^1.1.2",
-    "element-ui": "^2.15.10"
+    "axios": "^1.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.19.1",
@@ -13,21 +12,30 @@
     "@babel/preset-env": "^7.19.1",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
+    "husky": "^8.0.3",
     "rollup": "^2.79.1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-cleanup": "^3.2.1",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "standard-version": "^9.5.0"
   },
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "release": "standard-version",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "publishConfig": {
-    "registry": " https://registry.npmjs.org/"
+    "registry": "http://110.40.173.112:4873/"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:leigong421/lg-services.git"
   },
-  "author": "",
+  "author": "lg",
   "license": "ISC"
 }

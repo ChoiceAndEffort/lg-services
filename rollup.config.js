@@ -2,7 +2,7 @@
  * @Author: suchiva@126.com
  * @Date: 2022-08-30 15:49:48
  * @LastEditors: gonglei
- * @LastEditTime: 2022-10-12 10:14:45
+ * @LastEditTime: 2023-05-12 19:49:38
  * @Description: 打包
  */
 import resolve from '@rollup/plugin-node-resolve';
@@ -18,13 +18,12 @@ export default {
     format: 'umd', // umd是兼容amd/cjs/iife的通用打包格式，适合浏览器
     name: 'bundleName',
     globals: {
-      axios: 'axios',
-      'element-ui': 'element-ui'
+      axios: 'axios'
     }
   },
   plugins: [
     babel({
-      presets: ["@babel/preset-env"],
+      presets: ['@babel/preset-env'],
       exclude: 'node_modules/**', // 防止打包node_modules下的文件
       runtimeHelpers: true // 使plugin-transform-runtime生效
     }),
@@ -37,5 +36,5 @@ export default {
     }),
     cleanup() //清除注释
   ],
-  external: ['axios', 'element-ui']
+  external: ['axios']
 };
