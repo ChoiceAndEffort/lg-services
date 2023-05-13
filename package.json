@@ -1,8 +1,11 @@
 {
   "name": "@lg/lg-services",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "lg-services",
   "main": "./lib/index.js",
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "axios": "^1.1.2"
   },
