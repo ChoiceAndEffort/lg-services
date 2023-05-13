@@ -1,6 +1,6 @@
 {
   "name": "@lg/lg-services",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "lg-services",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
