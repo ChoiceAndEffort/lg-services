@@ -19,6 +19,7 @@
 ```
 
 ```js
+import { HttpRequest } from '@lg/lg-services';
 import { ElMessage } from 'element-plus';
 const options = {
   baseURL: baseUrl,
