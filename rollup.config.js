@@ -1,8 +1,8 @@
 /*
- * @Author: suchiva@126.com
+ * @Author: lg
  * @Date: 2022-08-30 15:49:48
- * @LastEditors: gonglei
- * @LastEditTime: 2023-05-13 10:58:03
+ * @LastEditors: lg
+ * @LastEditTime: 2023-05-13 13:51:10
  * @Description: 打包
  */
 import resolve from '@rollup/plugin-node-resolve';
