@@ -1,3 +1,19 @@
+# 封装 services 请求
+
+## 加入了 husky 代码提交规范的校验
+
+## 加入了 standard-version 自动生成 Changelog 日志和自动发版的指令
+
+```json
+
+  "scripts": {
+    "build": "rollup -c",
+    "release": "standard-version && npm publish",
+    "prepare": "husky install"
+  },
+
+```
+
 ```js
 import { ElMessage } from 'element-plus';
 const options = {
