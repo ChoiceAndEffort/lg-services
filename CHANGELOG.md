@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/leigong421/lg-services/compare/v0.0.1...v0.0.4) (2023-05-13)
+
+
+### Others
+
+* **release:** 0.0.3 ([cf4d3c1](https://github.com/leigong421/lg-services/commit/cf4d3c18c612327ed4b8dc4aa14eae023a59aae2))
+
 ### [0.0.3](https://github.com/leigong421/lg-services/compare/v0.0.1...v0.0.3) (2023-05-13)
 
 ### [0.0.1](https://github.com/leigong421/lg-services/compare/v0.0.5...v0.0.1) (2023-05-13)

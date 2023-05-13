@@ -1,6 +1,6 @@
 {
   "name": "@lg/lg-services",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "lg-services",
   "main": "./lib/index.js",
   "dependencies": {
