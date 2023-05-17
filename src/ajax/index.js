@@ -1,9 +1,9 @@
-import axios from 'axios';
+import axios from "axios";
 
 const MESSAGE_NOTICE = {
-  503: '服务器内部异常!',
-  401: '访问凭证无效，请重新登录授权!',
-  403: '访问凭证无效，请重新登录授权!'
+  503: "服务器内部异常!",
+  401: "访问凭证无效，请重新登录授权!",
+  403: "访问凭证无效，请重新登录授权!",
 };
 
 class HttpRequest {
@@ -24,10 +24,11 @@ class HttpRequest {
   addRequestInterceptor(options) {
     this.instance.interceptors.request.use(
       (config) => {
-        const token =
-          this.instance.token ||
-          JSON.parse(window.sessionStorage.getItem('vuex'))?.user?.token;
-        config.headers.token = token || '';
+        // const token =
+        //   this.instance.token ||
+        //   JSON.parse(window.sessionStorage.getItem('vuex'))?.user?.token;
+        // config.headers.token = token || '';
+
         return config;
       },
       (error) => {
@@ -45,38 +46,25 @@ class HttpRequest {
         function jsonHandler(response) {
           const { code, msg } = response.data;
           const res = response.data;
-          if (code === 0) {
+          if (code === options.successCode) {
             return response.data;
-          } else if (code === 401 || code === 403) {
-            options.messageCallback(
-              res.msg || MESSAGE_NOTICE[code],
-              options?.componentType
-            );
-
-            //如果返回码为需要登录, 清除token,跳转到登录页
-            setTimeout(() => {
-              window.sessionStorage.removeItem('vuex');
-              const url =
-                options?.customParams?.jumpUrl ||
-                window.location.href?.split('#')?.[0];
-              window.location.href = url;
-            }, 500);
-            return Promise.reject(res);
           } else {
-            options.messageCallback(res.msg || 'Error', options?.componentType);
+            options.messageCallback(res.msg || "Error", options?.componentType);
             return Promise.reject(res);
           }
         }
 
         if (response.status === 200) {
           //返回的数据不是对象
-          if (Object.prototype.toString.call(response.data) !== '[object Object]') {
+          if (
+            Object.prototype.toString.call(response.data) !== "[object Object]"
+          ) {
             return response;
           }
           return jsonHandler(response);
         } else {
           options.messageCallback(
-            response.statusText || 'Error',
+            response.statusText || "Error",
             options?.componentType
           );
           return Promise.reject(response);

@@ -19,21 +19,22 @@
 ```
 
 ```js
-import { HttpRequest } from '@lg/lg-services';
-import { ElMessage } from 'element-plus';
+import { HttpRequest } from "@lg/lg-services";
+import { ElMessage } from "element-plus";
 const options = {
-  baseURL: baseUrl,
+  baseURL: "",
   withCredentials: false,
-  timeout: TIME_OUT,
+  timeout: 30 * 1000,
   headers: {
-    'Access-Control-Allow-Origin': '*'
+    "Access-Control-Allow-Origin": "*",
   },
-  messageCallback: (message, type: any = 'error') => {
+  successCode: 0, //业务状态码-即服务端业务请求正确的状态码(区分与浏览器的ok的状态码,浏览器正常的状态是200,)
+  messageCallback: (message, type: any = "error") => {
     ElMessage({
       message,
-      type
+      type,
     });
-  }
+  },
 };
 
 const { instance: ajax } = new HttpRequest(options);
